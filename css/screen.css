@@ -260,9 +260,11 @@ input::placeholder {
 */
 
 .c-app {
-    display: block;
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
     width: 29em;
+    height: 100vh;
     padding-top: 32px;
 }
 
@@ -293,6 +295,7 @@ input::placeholder {
 }
 
 .c-horizon__sky-wrapper {
+    padding: 22px 44px 0 0;
     position: relative;
     height: 200px;
     overflow: hidden;
@@ -310,12 +313,17 @@ input::placeholder {
     justify-content: center;
     align-items: center;
     width: 40px;
+    transform: translateY(22px);
 }
 
 .c-horizon__sun::before {
     display: block;
     content: attr(data-time);
     text-align: center;
+}
+
+.c-horizon__spacer {
+    flex-grow: 1;
 }
 
 /*------------------------------------*\
